@@ -4,7 +4,15 @@ spring:
     username: sa
     password:
   jpa:
+    open-in-view: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
   flyway:
     enabled: false
+
+app:
+  security:
+    enabled: false
+    username: test-user
+    password: test-password
+    role: API_USER

@@ -1,8 +1,8 @@
-# Personal Finance Forecasting Platform
+# Portfolio-Grade Personal Finance Tracker
 
-Production-grade personal finance and forecasting platform built with Java 26 and Spring Boot 4.
+Portfolio-grade personal finance tracker built with Java 26 and Spring Boot 4.
 
-This project is intentionally designed as more than an expense tracker. It models real financial behavior across income, expenses, budgets, debt, savings goals, net worth, and deterministic forecasting scenarios.
+This project is intentionally designed as more than a CRUD expense tracker. It models real financial behavior across income, expenses, budgets, debt, savings goals, net worth, and deterministic forecasting scenarios.
 
 ## Why This Project Exists
 
@@ -17,9 +17,19 @@ This one is intended to grow into a decision-support system that helps a person 
 
 ## Current State
 
-This repository is in architecture-first mode.
+This repository started in architecture-first mode and now includes the first core implementation slice plus a deterministic forecast endpoint.
 
-The initial scaffold and architecture documentation are in place so implementation can begin from a clear design instead of growing reactively.
+## Swagger-First Usage
+
+This project is intended to be exercised primarily through Swagger UI rather than a separate frontend.
+
+- Swagger UI: `/swagger-ui/index.html`
+- OpenAPI docs: `/v3/api-docs`
+- API endpoints require HTTP Basic authentication by default
+- Default local credentials come from `application.yml` and can be overridden with:
+  - `APP_SECURITY_USERNAME`
+  - `APP_SECURITY_PASSWORD`
+  - `APP_SECURITY_ROLE`
 
 ## Core Product Themes
 
@@ -66,11 +76,12 @@ portfolio-grade-personal-finance-tracker
   README.md
 ```
 
-## Next Step
+## Implemented So Far
 
-The next implementation phase should begin with:
-
-1. finalising ubiquitous language
-2. defining MVP API contracts
-3. scaffolding core modules
-4. adding the first Flyway migrations
+1. shared finance-safe primitives
+2. profile, income, expense, budget, debt, goal, asset, and overview APIs
+3. Flyway-managed schema for the persisted financial inputs
+4. deterministic monthly forecast generation with what-if overrides
+5. debt payoff simulation, goal projection, monthly cashflow reporting, and debt summary reporting
+6. audit trail for financial create actions
+7. integration-tested Spring Boot endpoints

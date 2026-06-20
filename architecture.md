@@ -1,14 +1,14 @@
-# Personal Finance Forecasting Platform Architecture
+# Portfolio-Grade Personal Finance Tracker Architecture
 
 ## 1. Purpose
 
-This project is a production-grade personal finance platform focused on financial planning, forecasting, and decision support.
+This project is a portfolio-grade personal finance tracker focused on financial planning, forecasting, and decision support.
 
 It is not meant to be a basic CRUD expense tracker. The platform should help a user understand current financial position and reason about future outcomes under different scenarios.
 
 ## 2. Product Vision
 
-The product enables a user to model personal finances in one place:
+The product enables a user to track and model personal finances in one place:
 
 - income
 - expenses
@@ -18,7 +18,7 @@ The product enables a user to model personal finances in one place:
 - monthly budgets
 - future forecasts
 
-The most valuable outcome is not storage. It is insight.
+The most valuable outcome is not raw storage. It is insight.
 
 The platform should answer practical questions such as:
 
@@ -589,6 +589,9 @@ Deploy initially as:
 - monthly reports
 - first forecast engine
 
+Status:
+These are now partially implemented. Assets, net worth summary reporting, and a first deterministic forecast engine are available. Forecast persistence, richer scenarios, and historical run tracking are still pending.
+
 ### Phase 3
 
 - richer what-if scenarios
@@ -604,6 +607,6 @@ Deploy initially as:
 
 ## 20. Final Recommendation
 
-Build this as a modular monolith focused on financial modelling quality, deterministic projections, and strong domain language.
+Build this as a modular monolith focused on trustworthy financial tracking, financial modelling quality, deterministic projections, and strong domain language.
 
 The real differentiator is not transaction storage. It is turning personal financial data into understandable, trustworthy future scenarios.

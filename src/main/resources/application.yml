@@ -11,6 +11,9 @@ spring:
       ddl-auto: validate
   flyway:
     enabled: true
+  mvc:
+    problemdetails:
+      enabled: true
 
 server:
   error:
@@ -22,8 +25,16 @@ management:
       exposure:
         include: health,info,metrics
 
+app:
+  security:
+    enabled: true
+    username: ${APP_SECURITY_USERNAME:finance-admin}
+    password: ${APP_SECURITY_PASSWORD:finance-admin-password}
+    role: ${APP_SECURITY_ROLE:API_USER}
+
 springdoc:
   api-docs:
     enabled: true
   swagger-ui:
     enabled: true
+    persist-authorization: true
