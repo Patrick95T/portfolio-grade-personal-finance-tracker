@@ -15,6 +15,32 @@ This one is intended to grow into a decision-support system that helps a person 
 - When does my net worth become positive?
 - How does a new car payment change my long-term position?
 
+## Architecture At A Glance
+
+```text
+Profile
+  |
+  v
+Cashflow
+  |
+  v
+Budget
+  |
+  v
+Debt
+  |
+  v
+Goals
+  |
+  v
+Net Worth
+  |
+  v
+Forecast Engine
+```
+
+This flow reflects the way the product turns financial inputs into planning insight. Profile and cashflow establish the baseline, budgets and debts shape monthly constraints, goals and assets influence long-term intent, and the forecast engine projects future outcomes.
+
 ## Current State
 
 This repository started in architecture-first mode and now includes the first core implementation slice plus a deterministic forecast endpoint.
