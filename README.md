@@ -1,8 +1,46 @@
 # Portfolio-Grade Personal Finance Tracker
 
-Portfolio-grade personal finance tracker built with Java 26 and Spring Boot 4.
+Portfolio-grade personal finance and forecasting platform built with Java 26, Spring Boot 4, PostgreSQL, and Flyway.
 
 This project is intentionally designed as more than a CRUD expense tracker. It models real financial behavior across income, expenses, budgets, debt, savings goals, net worth, and deterministic forecasting scenarios.
+
+The goal is to show product thinking, domain modelling, and backend engineering discipline in one repository.
+
+## Why This Project Matters
+
+Most finance portfolio projects stop at storing transactions.
+
+This one is built to answer planning questions that feel closer to a real decision-support product:
+
+- What happens if I pay extra toward debt every month?
+- When will I reach a savings goal?
+- How does a new recurring expense affect my future position?
+- What does my net worth look like over the next 12 months?
+- How does a one-time financial shock change the forecast?
+
+That shift from storage to reasoning is the main point of the project.
+
+## What This Demonstrates
+
+- modular monolith design with clear business boundaries
+- domain language across profile, cashflow, budgeting, debt, goals, net worth, and forecasting
+- Flyway-managed schema evolution on PostgreSQL
+- deterministic financial forecasting and what-if scenario modelling
+- Swagger-first API exploration for fast local testing
+- security, validation, integration testing, and auditability
+
+## Key Features
+
+- financial profile management
+- recurring and one-off income tracking
+- recurring and one-off expense tracking
+- monthly budget planning and summary views
+- debt account management and payoff simulation
+- savings goals and completion projections
+- asset tracking and net worth reporting
+- monthly cashflow and debt summary reports
+- deterministic multi-month forecasting
+- audit events for key financial create actions
 
 ## Why This Project Exists
 
@@ -45,6 +83,15 @@ This flow reflects the way the product turns financial inputs into planning insi
 
 This repository started in architecture-first mode and now includes the first core implementation slice plus a deterministic forecast endpoint.
 
+Today it already supports the core financial workflow end to end:
+
+- create a financial profile
+- add incomes, expenses, budgets, debts, goals, and assets
+- review overview and reporting endpoints
+- simulate debt payoff scenarios
+- generate deterministic forecasts
+- inspect audit history
+
 ## Swagger-First Usage
 
 This project is intended to be exercised primarily through Swagger UI rather than a separate frontend.
@@ -56,6 +103,10 @@ This project is intended to be exercised primarily through Swagger UI rather tha
   - `APP_SECURITY_USERNAME`
   - `APP_SECURITY_PASSWORD`
   - `APP_SECURITY_ROLE`
+
+If you want a fast guided walkthrough with copy-paste payloads, use:
+
+- [docs/swagger-test-data.md](./docs/swagger-test-data.md)
 
 ## Core Product Themes
 
