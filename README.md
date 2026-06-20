@@ -51,6 +51,7 @@ Supporting design notes:
 - [docs/api-design.md](./docs/api-design.md)
 - [docs/domain-model.md](./docs/domain-model.md)
 - [docs/forecasting-rules.md](./docs/forecasting-rules.md)
+- [docs/swagger-test-data.md](./docs/swagger-test-data.md)
 
 ## Planned Stack
 
@@ -85,3 +86,9 @@ portfolio-grade-personal-finance-tracker
 5. debt payoff simulation, goal projection, monthly cashflow reporting, and debt summary reporting
 6. audit trail for financial create actions
 7. integration-tested Spring Boot endpoints
+
+## Testing Through Swagger
+
+For a copy-paste sample dataset and recommended end-to-end test flow, use:
+
+- [docs/swagger-test-data.md](./docs/swagger-test-data.md)
